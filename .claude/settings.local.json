@@ -1,7 +1,67 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:docs.claude.ai)"
-    ]
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git status *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(pip install *)",
+      "Bash(python *.py)",
+      "Bash(node *.js)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Read(**)",
+      "Write(./src/**)",
+      "Write(./docs/**)",
+      "Write(./tests/**)",
+      "Write(./*.md)",
+      "Write(./*.json)",
+      "Write(./*.yaml)",
+      "Write(./*.yml)"
+    ],
+    "ask": [
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(npm publish *)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(cp -r *)",
+      "Write(./package.json)",
+      "Write(./tsconfig.json)",
+      "Write(./.gitignore)",
+      "Write(./Dockerfile)",
+      "Write(./.env*)"
+    ],
+    "deny": [
+      "WebFetch",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(rm -rf *)",
+      "Bash(sudo *)",
+      "Bash(chmod *)",
+      "Bash(chown *)",
+      "Read(./.env)",
+      "Read(./secrets/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(**/node_modules/**)",
+      "Write(./.env)",
+      "Write(./secrets/**)"
+    ],
+    "additionalDirectories": [
+      "../shared-libs/",
+      "../common-utils/",
+      "~/projects/templates/"
+    ],
+    "defaultMode": "acceptEdits",
+    "disableBypassPermissionsMode": "disable"
   }
 }
